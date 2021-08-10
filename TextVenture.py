@@ -8,7 +8,7 @@ gold = 0
 loot = ["Sword", "Shield", "Training"]
 inventory = []
 name = input("Enter your name, hero: ")
-print("Welcome " + name + ". I hope you are prepared for great adventure!")
+print("\nWelcome " + name + ". I hope you are prepared for great adventure!")
 print("The King has requested us to defeat a dragon.")
 print()
 print("Before you can take on the dragon you will need to acquire the following: ")
@@ -35,6 +35,7 @@ while "Shield" not in inventory:
         print("************************************")
         print("*   You have acquired the sword!   *")
         print("************************************")
+        print()
         loot.pop(int(choice))
         inventory.append("Sword")
         break
@@ -58,8 +59,8 @@ while "Shield" not in inventory:
         continue
 while True:
     print(loot)
-    input()
-    select = input("\nWhat would you like to acquire next? Choose option 1 or 2: ")
+    select = input("What would you like to acquire next? Choose option 1 or 2: ")
+    print("\n")
     if select.isdigit():
         select = int(select)
         if select < 1 or select > 2:
@@ -112,7 +113,7 @@ while True:
     import random
     loop = 'y'
     while loop.lower() == 'y':
-        input("You walk around the area for a while to find the royals pests.")
+        input("You walk around the area for a while to find the royal pests.")
         input("You look around the courtyard.")
         input("You smell something foul nearby.")
         input("You spot the shadow of a critter!")
