@@ -1,10 +1,7 @@
 import random
 exp_total = 0
-dragon_hp = 200
 player_hp = 100
 attack = 8
-dragon_attack = 12
-dragon_fire = 25
 gold = 0
 loot = ["Sword", "Shield", "Training"]
 inventory = []
@@ -136,7 +133,6 @@ while True:
             if exp_total >= 21 and "4. Level-Up" not in inventory:
                 if "4. Level-Up" not in list:
                     list.append("4. Level-Up")
-
             print("**************************")
             print(list)
             print(name + "'s HP " + str(player_hp) + " | Rat's HP " + str(rat_hp))
@@ -202,7 +198,6 @@ while True:
                     if "4. Level-Up" in inventory:
                         rat_hp = int(rat_hp - attack)
                         print("You struck the rat for 12 hp!")
-
                     else:
                         rat_hp = int(rat_hp - attack)
                         print("You struck the rat for 8 hp!")
@@ -212,7 +207,6 @@ while True:
                         continue
                     else:
                         continue
-
             elif action == 1:
                 print("You've chosen to drink a potion.")
                 input()
@@ -367,7 +361,6 @@ while True:
             loop = input("\nFight again? ")
             print()
         continue
-
     else:
         print("Lets go hunt a dragon!")
         print(".")
